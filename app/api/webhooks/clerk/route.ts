@@ -45,11 +45,6 @@ export async function POST(req: Request) {
     }) as WebhookEvent
   } catch (err) {
     console.error('Error verifying webhook:', err);
-    const timestampInSeconds = Math.floor(Date.now() / 1000);
-    console.log(timestampInSeconds);
-    const timestampInMilliseconds = Date.now();
-    console.log(timestampInMilliseconds);
-
     return new Response('Error occured', {
       status: 400
     })
@@ -108,12 +103,5 @@ export async function POST(req: Request) {
   }
  
   return new Response('', { status: 200 })
-}
-
-
-export function GET() {
-  return NextResponse.json({
-    message: "Hello from api/webhook/route.ts"
-  });
 }
  
