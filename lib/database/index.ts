@@ -37,7 +37,7 @@ if (!cached) {
   };
 }
 
-export const connect = async () => {
+export const connectToDatabase = async () => {
   if (cached.conn) return cached.conn;
 
   cached.promise =
