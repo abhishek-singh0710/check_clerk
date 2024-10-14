@@ -211,3 +211,9 @@ export async function POST(req: Request) {
  
   return new Response('', { status: 200 })
 }
+
+export function GET() {
+  return NextResponse.json({
+    message: "Hello From Webhook Endpoint"
+  });
+}
